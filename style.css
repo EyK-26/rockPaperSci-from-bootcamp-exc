@@ -14,7 +14,7 @@ body {
   color: white;
   background: slategrey;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .scoreboard {
@@ -22,7 +22,7 @@ body {
   flex-wrap: wrap;
   max-width: 25rem;
   border: 2px solid white;
-  margin: 4rem auto;
+  margin: 2rem auto;
   padding: 1.5rem;
 }
 

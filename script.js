@@ -11,6 +11,7 @@ class Game {
   }
   init() {
     new Control(); //initiate player controls
+    new ResetGame(); //instantiate restart the game class
   }
 }
 //declare controls
@@ -89,8 +90,10 @@ class UpdateScores {
   }
 }
 //Update DOM and process the passed parameters from Evaluate class and evaluate method
-class UpdateDom {
+//extend from update scores bc passing it below for ResetGame class to reset scores
+class UpdateDom extends UpdateScores {
   constructor(playerChoice, botChoice, outcome) {
+    super();
     this.playerChoice = playerChoice;
     this.botChoice = botChoice;
     this.outCome = outcome;
@@ -107,6 +110,22 @@ class UpdateDom {
     this.choicePlayer.textContent = this.capitalize(this.playerChoice);
     this.choiceBot.textContent = this.capitalize(this.botChoice);
     this.result.textContent = this.capitalize(this.outCome);
+  }
+}
+//reset the game, extend from UpdateScore and UpdateDom the query selectors
+class ResetGame extends UpdateDom {
+  constructor() {
+    super();
+    this.resetBtn = document.querySelector(".btn.reset");
+    this.resetBtn.addEventListener("click", this.resetGame.bind(this));
+  }
+
+  resetGame() {
+    this.choicePlayer.textContent = "";
+    this.choiceBot.textContent = "";
+    this.result.textContent = "";
+    this.scorePlayer.textContent = "0";
+    this.scoreBot.textContent = "0";
   }
 }
 //instantiate/start the Game
