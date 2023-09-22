@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  color: white;
+  background: slategrey;
+  text-align: center;
+  padding: 4rem;
+}
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 25rem;
+  border: 2px solid white;
+  margin: 4rem auto;
+  padding: 1.5rem;
+}
+
+.scoreboard-title {
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.scoreboard-item {
+  width: 50%;
+}
+
+.score {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  color: slategrey;
+  background: white;
+  border: 2px solid white;
+  outline: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background: slategrey;
+}
+
+.result {
+  margin-top: 1.5rem;
+}
